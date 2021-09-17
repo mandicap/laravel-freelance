@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+            {{-- <x-jet-authentication-card-logo /> --}}
         </x-slot>
 
         <div x-data="{ recovery: false }">
@@ -13,7 +13,7 @@
                 {{ __('Please confirm access to your account by entering one of your emergency recovery codes.') }}
             </div>
 
-            <x-jet-validation-errors class="mb-4" />
+            <x-jet-validation-errors />
 
             <form method="POST" action="{{ route('two-factor.login') }}">
                 @csrf

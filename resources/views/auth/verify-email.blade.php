@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+            {{-- <x-jet-authentication-card-logo /> --}}
         </x-slot>
 
         <div class="mb-4 text-sm text-gray-600">
@@ -9,7 +9,7 @@
         </div>
 
         @if (session('status') == 'verification-link-sent')
-            <div class="mb-4 font-medium text-sm text-green-600">
+            <div class="mb-4 p-4 bg-green-600 font-medium text-sm text-white">
                 {{ __('A new verification link has been sent to the email address you provided during registration.') }}
             </div>
         @endif

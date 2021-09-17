@@ -4,10 +4,10 @@
             {{-- <x-jet-authentication-card-logo /> --}}
         </x-slot>
 
-        <x-jet-validation-errors class="mb-4 p-4 bg-red-600 text-white" />
+        <x-jet-validation-errors />
 
         @if (session('status'))
-            <div class="mb-4 font-medium text-sm text-green-600">
+            <div class="mb-4 p-4 bg-green-600 font-medium text-sm text-white">
                 {{ session('status') }}
             </div>
         @endif
