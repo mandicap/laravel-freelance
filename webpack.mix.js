@@ -15,6 +15,7 @@ mix.js('resources/js/scripts.js', 'public/js')
     .postCss('resources/css/styles.css', 'public/css', [
         require('postcss-import'),
         require('tailwindcss/nesting'),
+        require('postcss-custom-selectors'),
         require('tailwindcss'),
     ]);
 

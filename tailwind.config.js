@@ -9,7 +9,6 @@ module.exports = {
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
     ],
-
     theme: {
         colors: {
             transparent: 'transparent',
@@ -28,7 +27,10 @@ module.exports = {
             },
         },
     },
-
+    corePlugins: {
+        // Disables Tailwind's default container so it can be restyled
+        container: false,
+    },
     plugins: [
         require('@tailwindcss/forms'),
         require('@tailwindcss/typography')
