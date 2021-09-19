@@ -4,7 +4,7 @@
             {{-- <x-jet-authentication-card-logo /> --}}
         </x-slot>
 
-        <x-jet-validation-errors />
+        <x-jet-validation-errors class="mb-4" />
 
         <form method="POST" action="{{ route('password.update') }}">
             @csrf
@@ -27,9 +27,7 @@
             </div>
 
             <div class="flex items-center justify-end mt-4">
-                <x-jet-button>
-                    {{ __('Reset Password') }}
-                </x-jet-button>
+                <x-jet-button>{{ __('Reset Password') }}</x-jet-button>
             </div>
         </form>
     </x-jet-authentication-card>

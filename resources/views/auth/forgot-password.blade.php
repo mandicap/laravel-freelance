@@ -8,10 +8,10 @@
             {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
         </div>
 
-        <x-jet-validation-errors />
+        <x-jet-validation-errors class="mb-4" />
 
         @if (session('status'))
-            <div class="mb-4 p-4 bg-green-600 font-medium text-sm text-white">
+            <div class="alert success mb-4">
                 {{ session('status') }}
             </div>
         @endif

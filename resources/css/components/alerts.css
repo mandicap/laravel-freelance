@@ -1,0 +1,10 @@
+.alert {
+    @apply bg-gray-500 border border-gray-700;
+    @apply font-medium text-sm text-gray-100;
+    @apply mx-auto p-4;
+
+    &.success { @apply bg-green-500 border-green-700 text-green-100; }
+    &.danger { @apply bg-red-500 border-red-700 text-red-100; }
+    &.warning { @apply bg-yellow-500 border-yellow-700 text-yellow-100; }
+    &.info { @apply bg-blue-500 border-blue-700 text-blue-100; }
+}

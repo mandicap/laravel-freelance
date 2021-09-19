@@ -3,5 +3,6 @@
 
 @import 'tailwindcss/components';
 @import 'components/forms.css';
+@import 'components/alerts.css';
 
 @import 'tailwindcss/utilities';
