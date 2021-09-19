@@ -15,14 +15,14 @@
         <form method="POST" action="{{ route('login') }}">
             @csrf
 
-            <div>
+            <div class="input-group">
                 <x-jet-label for="email" value="{{ __('Email') }}" />
-                <x-jet-input id="email" type="email" name="email" :value="old('email')" required autofocus />
+                <x-jet-input id="email" type="email" class="bg-gray-300" name="email" :value="old('email')" required autofocus />
             </div>
 
-            <div class="mt-4">
+            <div class="input-group mt-4">
                 <x-jet-label for="password" value="{{ __('Password') }}" />
-                <x-jet-input id="password" type="password" name="password" required autocomplete="current-password" />
+                <x-jet-input id="password" type="password" class="bg-gray-300" name="password" required autocomplete="current-password" />
             </div>
 
             <div class="block mt-4">
