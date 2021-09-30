@@ -4,7 +4,7 @@
     </x-slot>
 
     <div>
-        <div class="container py-10">
+        <div class="container">
             @livewire('teams.update-team-name-form', ['team' => $team])
             @livewire('teams.team-member-manager', ['team' => $team])
 

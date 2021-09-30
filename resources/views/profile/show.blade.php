@@ -4,7 +4,7 @@
     </x-slot>
 
     <div>
-        <div class="container py-10">
+        <div class="container">
             @if (Laravel\Fortify\Features::canUpdateProfileInformation())
                 @livewire('profile.update-profile-information-form')
 

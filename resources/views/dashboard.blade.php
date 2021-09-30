@@ -4,8 +4,8 @@
     </x-slot>
 
     <div>
-        <div class="container py-12">
-            <div class="bg-white overflow-hidden shadow-xl">
+        <div class="container">
+            <div class="bg-white overflow-hidden shadow-sm">
                 <x-jet-welcome />
             </div>
         </div>
