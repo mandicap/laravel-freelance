@@ -24,13 +24,10 @@
 
         <!-- Team Name -->
         <div class="col-span-6 sm:col-span-4">
-            <x-jet-label for="name" value="{{ __('Team Name') }}" />
-
-            <x-jet-input id="name"
-                        type="text"
-                        class="mt-1 block w-full"
-                        wire:model.defer="state.name"
-                        :disabled="! Gate::check('update', $team)" />
+            <div class="input-group">
+                <x-jet-label for="name" value="{{ __('Team Name') }}" />
+                <x-jet-input id="name" type="text" class="bg-gray-50" wire:model.defer="state.name" :disabled="! Gate::check('update', $team)" />
+            </div>
 
             <x-jet-input-error for="name" class="mt-2" />
         </div>
@@ -43,7 +40,7 @@
             </x-jet-action-message>
 
             <x-jet-button>
-                {{ __('Save') }}
+                {{ __('Update') }}
             </x-jet-button>
         </x-slot>
     @endif

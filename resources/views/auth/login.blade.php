@@ -1,13 +1,13 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+            {{-- <x-jet-authentication-card-logo /> --}}
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
 
         @if (session('status'))
-            <div class="mb-4 font-medium text-sm text-green-600">
+            <div class="alert success mb-4">
                 {{ session('status') }}
             </div>
         @endif
@@ -15,14 +15,14 @@
         <form method="POST" action="{{ route('login') }}">
             @csrf
 
-            <div>
+            <div class="input-group">
                 <x-jet-label for="email" value="{{ __('Email') }}" />
-                <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+                <x-jet-input id="email" type="email" class="bg-gray-300" name="email" :value="old('email')" required autofocus />
             </div>
 
-            <div class="mt-4">
+            <div class="input-group mt-4">
                 <x-jet-label for="password" value="{{ __('Password') }}" />
-                <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
+                <x-jet-input id="password" type="password" class="bg-gray-300" name="password" required autocomplete="current-password" />
             </div>
 
             <div class="block mt-4">

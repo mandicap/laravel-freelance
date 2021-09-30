@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="//fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
     <link rel="stylesheet" href="{{ mix('css/styles.css') }}">
 
-</head><body>
+</head><body class="bg-gray-500">
 
     <div class="font-sans text-gray-900 antialiased">
         {{ $slot }}

@@ -1,0 +1,24 @@
+@custom-selector :--text-input [type='text'], [type='email'], [type='url'], [type='password'], [type='number'],
+    [type='date'], [type='datetime-local'], [type='month'], [type='search'], [type='tel'], [type='time'],
+    [type='week'], [multiple], textarea;
+
+.input-group {
+    @apply w-full;
+
+    & label { @apply block font-medium text-sm text-gray-700; }
+
+    & div {
+        @apply mt-1 border-b border-gray-300;
+
+        & :--text-input {
+            @apply block w-full;
+            @apply border-0 border-b border-transparent;
+            @apply text-gray-500;
+
+            &:focus { @apply ring-0 border-blue-600; }
+            &::placeholder { @apply text-gray-300; }
+
+            @media screen(sm) { @apply text-sm; }
+        }
+    }
+}

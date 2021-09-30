@@ -1,0 +1,29 @@
+@custom-selector :--top-heading h1, h2, h3;
+@custom-selector :--low-heading h4, h5, h6;
+@custom-selector :--heading :--top-heading, :--low-heading;
+
+html,
+body { @apply font-sans antialiased; }
+
+:--heading { @apply font-semibold; }
+:--top-heading { @apply text-3xl leading-tight; }
+:--low-heading { @apply text-xl leading-none; }
+
+#app { @apply min-h-screen bg-gray-200; }
+
+.page-header {
+    @apply max-w-7xl mx-auto px-4 py-10;
+
+    & :--top-heading { @apply text-gray-400 leading-none; }
+
+    @media screen(sm) { @apply px-6; }
+    @media screen(lg) { @apply px-8; }
+}
+
+.container {
+    @apply max-w-7xl mx-auto px-4;
+    @media screen(sm) { @apply px-6; }
+    @media screen(lg) { @apply px-8; }
+}
+
+[x-cloak] { display: none !important; }
